@@ -39,7 +39,7 @@ const Signup = () => {
         toast.info("Account already exists. Logging you in...");
       }
 
-      navigate("/dashboard");
+      navigate("/");
 
     } catch (error) {
       console.error("Google Signup Error:", error.message);
@@ -64,7 +64,7 @@ const Signup = () => {
       });
 
       toast.success("Account created successfully!");
-      navigate("/dashboard");
+      navigate("/");
 
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
@@ -115,10 +115,20 @@ const Signup = () => {
 
         <button
           onClick={handleGoogleSignup}
-          className="bg-green-500 hover:bg-green-600 text-white w-full py-2 rounded shadow-md"
+          className="bg-green-500 hover:bg-green-600 text-white w-full py-2 rounded shadow-md mb-4"
         >
           Sign Up with Google
         </button>
+
+        <div className="mt-4 text-sm">
+          Already have an account?{" "}
+          <button
+            onClick={() => navigate("/login")}
+            className="text-blue-600 hover:underline"
+          >
+            Login
+          </button>
+        </div>
       </div>
     </div>
   );

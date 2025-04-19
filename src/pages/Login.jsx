@@ -24,7 +24,7 @@ const Login = () => {
         if (role === "admin") {
           navigate("/admin-dashboard");
         } else {
-          navigate("/dashboard");
+          navigate("/");
         }
       } else {
         // If user doesn't exist in Firestore (e.g., if not registered via signup)
@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center ml-64 p-4">
       <div className="bg-white rounded-2xl p-10 shadow-lg max-w-sm text-center">
         <h2 className="text-2xl font-bold mb-6">Login</h2>
 
