@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import Sidebar from "./components/Sidebar";
-import Header from "./components/Header"; // Import Header
-import Topics from "./pages/Topics"; // Ensure this file exists
-import Welcome from "./pages/Welcome"; // Import Welcome page
+import Header from "./components/Header";
+import Topics from "./pages/Topics";
+import Welcome from "./pages/Welcome";
 import Parliamentary from "./pages/Parliamentary";
 import Oxford from "./pages/Oxford";
 import HowTo from "./pages/HowTo";
@@ -14,22 +14,25 @@ import AboutUs from "./pages/AboutUs";
 import Help from "./pages/Help";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Footer from "./components/Footer"; // Import Footer
 import Dashboard from "./pages/Dashboard";
 import RoleBasedRoute from "./components/RoleBasedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // (Assuming you've created this)
 import "./App.css";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="flex flex-col h-screen">
-          <Header /> {/* Add the Header here */}
-          <div className="flex flex-grow">
+        <div className="flex flex-col min-h-screen">
+          <Header />
+
+          <div className="flex flex-1">
             <Sidebar />
             <div className="flex-1 p-5">
               <Routes>
-                <Route path="/" element={<Welcome />} /> {/* Default route */}
+                <Route path="/" element={<Welcome />} />
                 <Route path="/topics" element={<Topics />} />
                 <Route path="/how-to" element={<HowTo />} />
                 <Route path="/parliamentary" element={<Parliamentary />} />
@@ -39,27 +42,31 @@ function App() {
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/help" element={<Help />} />
                 <Route path="/login" element={<Login />} />
-                <Route
-  path="/admin-dashboard"
-  element={
-    <RoleBasedRoute allowedRoles={["admin"]}>
-      <AdminDashboard />
-    </RoleBasedRoute>
-  }
-/>
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
                 <Route
-  path="/dashboard"
-  element={
-    <RoleBasedRoute allowedRoles={["user", "admin"]}>
-      <Dashboard />
-    </RoleBasedRoute>
-  }
-/>
-                {/* Add more routes as needed */}
+                  path="/admin-dashboard"
+                  element={
+                    <RoleBasedRoute allowedRoles={["admin"]}>
+                      <AdminDashboard />
+                    </RoleBasedRoute>
+                  }
+                />
+
+                <Route
+                  path="/dashboard"
+                  element={
+                    <RoleBasedRoute allowedRoles={["user", "admin"]}>
+                      <Dashboard />
+                    </RoleBasedRoute>
+                  }
+                />
               </Routes>
             </div>
           </div>
+
+          <Footer /> {/* 👈 Add Footer here */}
         </div>
       </Router>
     </AuthProvider>
