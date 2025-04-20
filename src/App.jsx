@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import Sidebar from "./components/SideBar";
+import Sidebar from "./components/Sidebar";
 import Header from "./components/Header"; // Import Header
 import Topics from "./pages/Topics"; // Ensure this file exists
 import Welcome from "./pages/Welcome"; // Import Welcome page
