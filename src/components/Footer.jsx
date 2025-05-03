@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-10 py-4 text-center bg-gray-100 text-gray-600 text-sm">
+    <footer className="ml-64 mt-10 py-4 text-center text-gray-600 text-sm">
       <p>
         © {new Date().getFullYear()} DebateGo. All rights reserved. |{" "}
         <Link
