@@ -7,12 +7,12 @@ const Rooms = () => {
   const [roomLink, setRoomLink] = useState("");
 
   const defaultRooms = [
-    { id: 1, name: "Room 1", zoomLink: "https://zoom.us/j/your_meeting_id_1" },
-    { id: 2, name: "Room 2", zoomLink: "https://zoom.us/j/your_meeting_id_2" },
-    { id: 3, name: "Room 3", zoomLink: "https://zoom.us/j/your_meeting_id_3" },
-    { id: 4, name: "Room 4", zoomLink: "https://zoom.us/j/your_meeting_id_4" },
-    { id: 5, name: "Room 5", zoomLink: "https://zoom.us/j/your_meeting_id_5" },
-    { id: 6, name: "Room 6", zoomLink: "https://zoom.us/j/your_meeting_id_6" },
+    { id: 1, name: "Room 1", zoomLink: "https://meet.google.com/ngs-sctn-rxg" },
+    { id: 2, name: "Room 2", zoomLink: "https://meet.google.com/jsd-okvx-oim" },
+    { id: 3, name: "Room 3", zoomLink: "https://meet.google.com/kyc-aezm-aiz" },
+    { id: 4, name: "Room 4", zoomLink: "https://meet.google.com/itb-ofgw-qsm" },
+    { id: 5, name: "Room 5", zoomLink: "https://meet.google.com/usf-gwjm-xcg" },
+    { id: 6, name: "Room 6", zoomLink: "https://meet.google.com/zmc-ycjw-jrj" },
   ];
 
   const handleCreateRoom = (e) => {
