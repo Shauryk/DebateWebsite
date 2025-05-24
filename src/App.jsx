@@ -37,7 +37,7 @@ function App() {
           <div className="flex flex-1">
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-            <div className="flex-1 p-5 md:ml-64">
+            <div className="flex-1 p-5">
               <Routes>
                 <Route path="/" element={<Welcome />} />
                 <Route path="/topics" element={<Topics />} />
