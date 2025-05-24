@@ -6,7 +6,7 @@ const HowTo = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="ml-64 mt-8 min-h-screen flex flex-col justify-center items-center p-5 ">
+    <div className="mt-8 min-h-screen flex py-18 flex-col justify-center items-center p-5 ">
       <h1 className="text-4xl font-bold text-gray-800 mb-8">Choose Debate Format</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">

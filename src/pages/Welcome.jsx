@@ -1,6 +1,6 @@
 const Welcome = () => {
     return (
-        <div className="mt-30 p-5 ml-60">
+        <div className="mt-30 p-5">
       <div className="p-5 text-center">
         <p className="mt-3 text-lg">
         Welcome to DebateGo!- The ultimate platform for sharpening your debate skills. Whether you’re just starting or a seasoned debater, we’ve got you covered.

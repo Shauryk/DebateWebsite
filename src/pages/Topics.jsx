@@ -36,7 +36,7 @@ const Topics = () => {
   
 
   return (
-    <div className="ml-64 mt-30 p-5 min-h-screen flex justify-center">
+    <div className="mt-30 p-5 min-h-screen flex justify-center">
       <div className="w-full max-w-4xl">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8">

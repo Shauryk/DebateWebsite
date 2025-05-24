@@ -1,9 +1,15 @@
 import { useState } from "react";
-import { FaHome, FaQuestionCircle, FaSignInAlt, FaTrophy, FaInfoCircle, FaBook } from "react-icons/fa";
+import {
+  FaBook,
+  FaQuestionCircle,
+  FaInfoCircle,
+  FaTrophy,
+  FaSignInAlt
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/DebateGo.png"; // 👈 update path if different
+import logo from "../assets/DebateGo.png";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
   const [active, setActive] = useState("Today's Topics");
 
   const menuItems = [
@@ -17,30 +23,42 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 h-screen bg-[#8393B5] text-white p-5 flex flex-col fixed left-0 top-0">
-      {/* 👇 Logo */}
-      <img
-        src={logo}
-        alt="Logo"
-        className="w-32 h-auto mb-8 mx-auto"
+    <>
+      {/* Sidebar Overlay for mobile */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden transition-opacity duration-300 ${
+          isOpen ? "block" : "hidden"
+        }`}
+        onClick={toggleSidebar}
       />
 
-      <nav>
-        {menuItems.map((item) => (
-          <Link
-            key={item.name}
-            to={item.path}
-            className={`flex items-center gap-3 p-3 rounded-lg mb-2 cursor-pointer transition-all duration-300 ${
-              active === item.name ? "bg-gray-700" : "hover:bg-gray-700"
-            }`}
-            onClick={() => setActive(item.name)}
-          >
-            {item.icon}
-            <span>{item.name}</span>
-          </Link>
-        ))}
-      </nav>
-    </div>
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-[#8393B5] text-white p-5 flex flex-col z-40 transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0 md:static md:h-screen`}
+      >
+        <img src={logo} alt="Logo" className="w-32 h-auto mb-8 mx-auto" />
+
+        <nav>
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className={`flex items-center gap-3 p-3 rounded-lg mb-2 cursor-pointer transition-all duration-300 ${
+                active === item.name ? "bg-gray-700" : "hover:bg-gray-700"
+              }`}
+              onClick={() => {
+                setActive(item.name);
+                toggleSidebar(); // auto-close on mobile
+              }}
+            >
+              {item.icon}
+              <span>{item.name}</span>
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </>
   );
 };
 

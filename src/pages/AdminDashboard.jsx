@@ -33,7 +33,7 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div className="p-6 mt-24 ml-64">
+    <div className="p-6 mt-24">
       <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
       <h2 className="text-xl mb-4">Manage User Scores</h2>

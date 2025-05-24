@@ -14,23 +14,30 @@ import AboutUs from "./pages/AboutUs";
 import Help from "./pages/Help";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Footer from "./components/Footer"; // Import Footer
+import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 import RoleBasedRoute from "./components/RoleBasedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // (Assuming you've created this)
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import "./App.css";
 
+import { useState } from "react";
+
 function App() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+
   return (
     <AuthProvider>
       <Router>
         <div className="flex flex-col min-h-screen">
-          <Header />
+          <Header toggleSidebar={toggleSidebar} />
 
           <div className="flex flex-1">
-            <Sidebar />
-            <div className="flex-1 p-5">
+            <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+            <div className="flex-1 p-5 md:ml-64">
               <Routes>
                 <Route path="/" element={<Welcome />} />
                 <Route path="/topics" element={<Topics />} />
@@ -66,7 +73,7 @@ function App() {
             </div>
           </div>
 
-          <Footer /> {/* 👈 Add Footer here */}
+          <Footer />
         </div>
       </Router>
     </AuthProvider>

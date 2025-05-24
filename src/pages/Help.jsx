@@ -2,7 +2,7 @@ import React from "react";
 
 const Help = () => {
   return (
-    <div className="ml-64 min-h-screen mt-16 py-10 px-6 flex justify-center">
+    <div className="min-h-screen mt-16 py-10 flex justify-center">
       <div className="max-w-4xl w-full p-8">
         <h1 className="text-4xl font-bold text-center text-blue-800 mb-10">
           Help & Support

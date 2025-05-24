@@ -77,7 +77,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen mt-12 ml-64 flex items-center justify-center p-4">
+    <div className="min-h-screen mt-12 flex items-center justify-center p-4">
       <ToastContainer />
       <div className="bg-white rounded-2xl p-10 shadow-lg max-w-sm w-full text-center">
         <h2 className="text-2xl font-bold mb-6">Create an Account</h2>

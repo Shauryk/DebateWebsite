@@ -32,7 +32,7 @@ const Rooms = () => {
   };
 
   return (
-    <div className="min-h-screen ml-64 mt-24 py-12 px-6 flex justify-center">
+    <div className="min-h-screen mt-24 py-12 flex justify-center">
       <div className="max-w-5xl w-full">
         <h1 className="text-4xl font-bold text-center mb-10">
           Join or Create a Room
