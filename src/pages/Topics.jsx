@@ -5,12 +5,17 @@ const Topics = () => {
   const [cons, setCons] = useState([]);
 
   const debateTopics = [
-    "AI should replace human workers",
-    "Remote work reduces productivity",
-    "Social media does more harm than good",
-    "Climate change policies hurt the economy",
-    "Universal basic income is essential",
-  ];
+  "Should cryptocurrencies be regulated like traditional currencies?",
+  "Is it ethical for corporations to prioritize shareholder profit over employee welfare?",
+  "Should governments impose higher taxes on the ultra-wealthy to reduce inequality?",
+  "Are tax havens legal loopholes or outright fraud?",
+  "Should insider trading carry harsher penalties?",
+  "Is universal basic income (UBI) a sustainable economic solution?",
+  "Should intellectual property laws be relaxed to promote innovation?",
+  "Are fines and penalties for corporations too lenient to deter misconduct?",
+  "Does the gig economy exploit workers under current labor laws?",
+  "Should student loans be forgiven to alleviate financial crises?",
+];
 
   const handleSpin = () => {
     const randomTopic =
@@ -44,10 +49,10 @@ const Topics = () => {
           </button>
         </div>
 
-        <p className="mb-6 text-lg">
+        {/* <p className="mb-6 text-lg">
           Is it ethical for corporations to prioritize shareholder profit over
           employee welfare?
-        </p>
+        </p> */}
 
         {/* Pros & Cons Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
