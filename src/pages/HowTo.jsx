@@ -16,8 +16,8 @@ const HowTo = () => {
           className="cursor-pointer bg-white hover:bg-blue-100 transition rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
         >
           <Gavel size={48} className="text-blue-600 mb-4" />
-          <h2 className="text-2xl font-semibold text-gray-800">Parliamentary</h2>
-          <p className="text-gray-500 mt-2">Learn how the Parliamentary debate format works.</p>
+          <h2 className="text-2xl font-semibold text-gray-800">Public Forum</h2>
+          <p className="text-gray-500 mt-2">Learn how the Public Forum format works.</p>
         </div>
 
         {/* Oxford Box */}
@@ -26,8 +26,8 @@ const HowTo = () => {
           className="cursor-pointer bg-white hover:bg-green-100 transition rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
         >
           <BookOpen size={48} className="text-green-600 mb-4" />
-          <h2 className="text-2xl font-semibold text-gray-800">Oxford</h2>
-          <p className="text-gray-500 mt-2">Understand the classic Oxford-style debate format.</p>
+          <h2 className="text-2xl font-semibold text-gray-800">Lincoln Douglas</h2>
+          <p className="text-gray-500 mt-2">Understand the classic Lincoln Douglas debate format.</p>
         </div>
       </div>
     </div>

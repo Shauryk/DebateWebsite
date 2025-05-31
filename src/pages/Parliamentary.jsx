@@ -5,7 +5,7 @@ const Parliamentary = () => {
     <div className="mt-30 min-h-screen py-10 flex justify-center">
       <div className="max-w-4xl w-full">
         <h1 className="text-4xl font-bold text-gray-800 mb-8">
-          Parliamentary Debate Format
+          Public Forum Format
         </h1>
 
         {/* The Setup */}
