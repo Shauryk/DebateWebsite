@@ -11,6 +11,7 @@ import Rooms from "./pages/Rooms";
 import Leaderboard from "./pages/Leaderboard";
 import PrivateRoute from "./components/PrivateRoute";
 import AboutUs from "./pages/AboutUs";
+import Chat from "./pages/Chat";
 import Help from "./pages/Help";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/rooms" element={<Rooms />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/chat" element={<PrivateRoute><Chat /></PrivateRoute>} />
                 <Route path="/help" element={<Help />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />

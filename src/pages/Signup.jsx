@@ -4,6 +4,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   createUserWithEmailAndPassword,
+  updateProfile, // ✅ added this
 } from "firebase/auth";
 import { setDoc, doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
@@ -56,6 +57,12 @@ const Signup = () => {
       );
       const user = userCredential.user;
 
+      // ✅ Set displayName in Firebase Auth profile
+      await updateProfile(user, {
+        displayName: name,
+      });
+
+      // ✅ Also store it in Firestore
       await setDoc(doc(db, "DebateGoUsers", user.uid), {
         displayName: name,
         email: user.email,

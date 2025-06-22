@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-firebase/auth": "^21.13.0",
     "@tailwindcss/vite": "^4.0.12",
+    "date-fns": "^4.1.0",
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -5,7 +5,8 @@ import {
   FaInfoCircle,
   FaTrophy,
   FaSignInAlt,
-} from "react-icons/fa";
+  FaComments,
+} from "react-icons/fa"; 
 import { Link } from "react-router-dom";
 import logo from "../assets/DebateGo.png";
 
@@ -17,6 +18,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     { name: "How To", icon: <FaQuestionCircle />, path: "/how-to" },
     { name: "Meetings", icon: <FaInfoCircle />, path: "/rooms" },
     { name: "Leaderboard", icon: <FaTrophy />, path: "/leaderboard" },
+    { name: "Chat", icon: <FaComments />, path: "/chat" }, // ✅ New chat item
     { name: "About Us", icon: <FaInfoCircle />, path: "/about" },
     { name: "Help", icon: <FaQuestionCircle />, path: "/help" },
     { name: "Login/Sign In", icon: <FaSignInAlt />, path: "/signup" },
